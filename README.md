@@ -1,19 +1,14 @@
-# PixelMob 众筹项目经营复盘
+# PixelMob Kickstarter Review
 
-PixelMob 2026 年 Kickstarter 众筹项目的内部经营复盘。单文件 HTML，双击即可阅读，无需服务端。
+PixelMob 2026 Kickstarter internal business review. GitHub Pages/Vercel entry is `index.html`.
 
-## 内容结构
+## Editable source
+- `sections/00_shell.html` through `03_close_retail_appendix.html`: report sections
+- `assets/styles.css`: visual system
+- `assets/app.js`: theme, navigation, and daily-ledger interactions
+- `build.py`: rebuild the standalone deployable `index.html`
+- `_archive_before_20261116/`: exact prior deployment snapshot for rollback
 
-- 执行摘要：五个判断 + 三个待决策
-- 第一部分 销售结果：SKU 结构、地区分布、节奏与增长、新老客、定金人群、购买动因
-- 第二部分 流量与渠道：逐日矩阵、营销费用、前测、广告（类型/人群/素材/国家/漏斗）、达人、PR、联盟、内容、客户管理、群组与客服、支付摩擦
-- 第三部分 收尾与零售：收尾节奏、Shopify 零售、资产延续、90 天计划、资金结余口径
-- 附录：口径字典、数据来源与缺口
+Run `python3 build.py` after source edits. The page is self-contained at deploy time (CSS and JS inlined by build).
 
-## 口径说明
-
-全文并存五种金额口径：承诺额、页面净增、表内归因、达人明细、实收。差异与使用边界见附录「口径字典」，引用时请勿混用。
-
-## 数据截止
-
-2026-11-12。金额单位美元。
+Data cutoff: 2026-11-12. The review and its known caveats remain as written; this publication does not certify unresolved business figures.

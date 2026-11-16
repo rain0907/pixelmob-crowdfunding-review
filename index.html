@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>PixelMob 众筹项目经营复盘</title>
-<style>
 
-:root{
+<!-- standalone build -->
+<style>\n:root{
   --bg:#f6f8fb; --panel:#ffffff; --th:#f7f9fc; --tint:#f1f6fd;
   --line:#e3eaf3; --line2:#e8eef6; --line3:#dfe9f6;
   --ink:#12233b; --ink2:#1f344e; --body:#536983; --muted:#65748a;
@@ -396,12 +396,8 @@ table.spec-survey th:nth-child(2),table.spec-survey td:nth-child(2){width:46%}
 table.spec-survey th:nth-child(3),table.spec-survey td:nth-child(3){width:34%}
 table.spec-survey td{white-space:normal;word-break:normal}
 tr.hl{background:rgba(255,107,0,.12)!important}
-
-</style>
-<!-- standalone build -->
-</head>
+\n</style>\n</head>
 <body>
-
 <nav><button class="toc-toggle" aria-expanded="false" aria-controls="toc-mobile">目录</button><b>PIXELMOB</b><div class="links"><a href="#p1">项目表现</a><a href="#p2">营销与渠道</a><a href="#p3">收尾与零售</a><a href="#p4">复盘</a></div></nav>
 <aside id="toc-mobile" class="report-nav" aria-label="报告目录"><div class="nav-title">报告目录</div><div class="nav-list"><a href="#section-0"><span>1.1</span> 重点数据</a><a href="#section-1"><span>1.2</span> SKU 与用户偏好</a><a href="#section-2"><span>1.3</span> 订单地区分布</a><a href="#section-3"><span>1.4</span> 销售节奏与增长效果</a><a href="#section-4"><span>1.5</span> 新老客</a><a href="#section-5"><span>1.6</span> 定金人群特征</a><a href="#section-6"><span>1.7</span> 关注者转化</a><a href="#section-7"><span>1.8</span> 购买动因</a><a href="#section-7b"><span>2.0</span> 逐日作战与渠道总览</a><a href="#section-8"><span>2.1</span> 营销费用：MKT 与广告</a><a href="#section-9"><span>2.2</span> 前测效率</a><a href="#section-11"><span>2.3</span> 广告</a><a href="#section-10"><span>2.4</span> 达人渠道</a><a href="#section-11b"><span>2.5</span> PR</a><a href="#section-11c"><span>2.6</span> 联盟</a><a href="#section-12"><span>2.7</span> 内容运营机制</a><a href="#section-13"><span>2.8</span> 客户管理机制</a><a href="#section-14"><span>2.9</span> 群组与客服</a><a href="#section-15"><span>2.10</span> 支付摩擦</a><a href="#section-16"><span>3.1</span> 众筹收尾</a><a href="#section-17"><span>3.2</span> Shopify 正式零售</a><a href="#section-18"><span>3.3</span> 营销资产与能力延续</a><a href="#section-19"><span>3.4</span> 客户资产</a><a href="#section-20"><span>3.5</span> 未来 90 天计划</a><a href="#section-21"><span>3.6</span> 资金结余口径</a><a href="#section-22"><span>附录 A</span> 数据来源与缺口</a></div></aside><main class="shell">
 <section class="cover">
@@ -437,7 +433,6 @@ tr.hl{background:rgba(255,107,0,.12)!important}
 <p class="caption">数据截止 2026-11-12；口径见附录字典。</p>
 </div>
 </section>
-
 
 <div class="chapter-head" id="p1"><div class="over">PART 01 / CAMPAIGN PERFORMANCE</div><h2>一、销售结果</h2></div>
 
@@ -639,6 +634,7 @@ tr.hl{background:rgba(255,107,0,.12)!important}
 </div>
 </section>
 <!-- ======== 流量端 ======== -->
+
 <div class="chapter-head" id="p2"><div class="over">PART 02 / MARKETING &amp; CHANNELS</div><h2>二、流量与渠道</h2></div>
 
 <section class="chapter" data-role="cyan">
@@ -1356,6 +1352,7 @@ tr.hl{background:rgba(255,107,0,.12)!important}
 </section>
 
 <!-- ======== 收尾 ======== -->
+
 <div class="chapter-head" id="p3"><div class="over">PART 03 / CLOSING &amp; RETAIL</div><h2>三、收尾与零售</h2></div>
 
 <section class="chapter" data-role="purple">
@@ -1518,60 +1515,7 @@ tr.hl{background:rgba(255,107,0,.12)!important}
 
 
 
-</main>
-<script>
 
-var tb=document.getElementById('btnTheme');
-function setTheme(t){document.documentElement.setAttribute('data-theme',t);
-  tb.textContent=(t==='dark'?'浅色':'深色');
-  try{localStorage.setItem('pm-theme',t)}catch(e){}}
-var saved=null;try{saved=localStorage.getItem('pm-theme')}catch(e){}
-setTheme(saved||document.documentElement.getAttribute('data-theme')||'dark');
-tb.addEventListener('click',function(){
-  setTheme(document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark');});
 
-</script>
-<script>
-
-(function(){const menu=document.querySelector('.report-nav'),toggle=document.querySelector('.toc-toggle');toggle.addEventListener('click',()=>{const open=menu.classList.toggle('is-open');toggle.setAttribute('aria-expanded',String(open))});const links=[...menu.querySelectorAll('a')];links.forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('is-open');toggle.setAttribute('aria-expanded','false')}));if('IntersectionObserver' in window){let observer=new IntersectionObserver(entries=>{for(const e of entries)if(e.isIntersecting){links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))}},{rootMargin:'-15% 0px -75% 0px'});links.forEach(a=>{const target=document.querySelector(a.getAttribute('href'));if(target)observer.observe(target)})}})();
-
-</script>
-<script>
-(function(){
-  var root=document.getElementById('m14-matrix');
-  if(!root) return;
-
-  // 行点击展开/收起当日明细
-  root.querySelectorAll('tr[data-i]').forEach(function(tr){
-    tr.style.cursor='pointer';
-    tr.addEventListener('click',function(ev){
-      if(ev.target.closest('a')) return;
-      var d=document.getElementById('det-'+tr.dataset.i);
-      if(d){ d.hidden=!d.hidden; }
-    });
-  });
-
-  // 矩阵点某天：展开折叠区 → 滚动到对应行 → 高亮
-  root.querySelectorAll('.mhit').forEach(function(a){
-    a.addEventListener('click',function(ev){
-      ev.preventDefault();
-      var id=(a.getAttribute('href')||'').slice(1);
-      var tr=document.getElementById(id);
-      if(!tr) return;
-
-      var box=tr.closest('details');
-      if(box && !box.open){ box.open=true; }
-      var det=document.getElementById('det-'+tr.dataset.i);
-      if(det) det.hidden=false;
-
-      setTimeout(function(){
-        tr.scrollIntoView({behavior:'smooth',block:'center'});
-        tr.classList.add('hl');
-        setTimeout(function(){ tr.classList.remove('hl'); },2200);
-      },80);
-    });
-  });
-})();
-
-</script></body>
+</body>
 </html>
