@@ -10,7 +10,7 @@ headpart=re.sub(r"<style>.*?</style>", "", headpart, flags=re.S)
 headpart=headpart.replace("</head>", "<style>\\n"+css+"\\n</style>\\n</head>")
 sections=["00_shell.html","01_sales.html","02_channels.html","03_close_retail_appendix.html"]
 body="\n".join((ROOT/"sections"/n).read_text(encoding="utf-8") for n in sections)
-body=body.replace("</main>", "</main>\n<script src=\"assets/app.js\"></script>",1)
-js=(ROOT/"assets/app.js").read_text(encoding="utf-8")
+js=(ROOT/"assets/app.js").read_text(encoding="utf-8").replace("</script>","<\\/script>")
+body += "\n<script>\n"+js+"\n</script>"
 (ROOT/"index.html").write_text(headpart+"\n"+body+"\n</body>\n</html>\n",encoding="utf-8")
 print("built",ROOT/"index.html")
